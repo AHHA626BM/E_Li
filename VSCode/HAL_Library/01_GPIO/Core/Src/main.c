@@ -162,10 +162,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   while (1) {
-    LED_Chaser_1();
-    LED_Chaser_2();
-    LED_Chaser_3();
-    LED_Chaser_4();
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1));
 
     /* USER CODE END WHILE */
 
