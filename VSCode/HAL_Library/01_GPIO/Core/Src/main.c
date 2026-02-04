@@ -19,7 +19,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "gpio.h"
+#include "stm32f103xb.h"
 #include "stm32f1xx_hal.h"
+#include "stm32f1xx_hal_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -120,7 +122,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  uint8_t mode = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -161,33 +162,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   while (1) {
-    switch (mode) {
-      case 0:
-        LED_Chaser_1();
-        break;
-      case 1:
-        LED_Chaser_2();
-        break;
-      case 2:
-        LED_Chaser_3();
-        break;
-      case 3:
-        LED_Chaser_4();
-        break;
-      default:
-        break;
-      }
-      if (!(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1))) {
-        HAL_Delay(5);
-      }
-        if (!(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1))){
-          mode = (mode + 1) % 4;
-        }
-          while (1) {
-            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13,
-                              HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1));
-            HAL_Delay(1);
-          }
+    LED_Chaser_1();
+    LED_Chaser_2();
+    LED_Chaser_3();
+    LED_Chaser_4();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
