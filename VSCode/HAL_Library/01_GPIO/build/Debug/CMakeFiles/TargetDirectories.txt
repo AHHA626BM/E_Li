@@ -1,5 +1,4 @@
 D:/Programe/MCU_Project/STM32/Protues/E_Li/VSCode/HAL_Library/01_GPIO/build/Debug/CMakeFiles/01_GPIO.dir
-D:/Programe/MCU_Project/STM32/Protues/E_Li/VSCode/HAL_Library/01_GPIO/build/Debug/CMakeFiles/GenHex.dir
 D:/Programe/MCU_Project/STM32/Protues/E_Li/VSCode/HAL_Library/01_GPIO/build/Debug/CMakeFiles/edit_cache.dir
 D:/Programe/MCU_Project/STM32/Protues/E_Li/VSCode/HAL_Library/01_GPIO/build/Debug/CMakeFiles/rebuild_cache.dir
 D:/Programe/MCU_Project/STM32/Protues/E_Li/VSCode/HAL_Library/01_GPIO/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
