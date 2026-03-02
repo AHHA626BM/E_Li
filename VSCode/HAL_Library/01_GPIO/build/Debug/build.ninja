@@ -173,7 +173,7 @@ build CMakeFiles/GenHex | ${cmake_ninja_workdir}CMakeFiles/GenHex: phony 01_GPIO
 
 build 01_GPIO.hex | ${cmake_ninja_workdir}01_GPIO.hex: CUSTOM_COMMAND 01_GPIO.elf || 01_GPIO.elf cmake/stm32cubemx/STM32_Drivers
   COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Programe\MCU_Project\STM32\Protues\E_Li\VSCode\HAL_Library\01_GPIO\build\Debug && arm-none-eabi-objcopy -O ihex D:/Programe/MCU_Project/STM32/Protues/E_Li/VSCode/HAL_Library/01_GPIO/build/Debug/01_GPIO.elf D:/Programe/MCU_Project/STM32/Protues/E_Li/VSCode/HAL_Library/01_GPIO/build/Debug/01_GPIO.hex"
-  DESC = 正在生成01_GPIO.hex文件...
+  DESC = Creating Intel HEX file: 01_GPIO.hex
   restat = 1
 
 # =============================================================================

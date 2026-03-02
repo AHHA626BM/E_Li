@@ -81,7 +81,7 @@ add_custom_command(
     # CMAKE_OBJCOPY是CMake自动检测的交叉编译工具链中的objcopy，无需手动指定路径
     COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${CMAKE_PROJECT_NAME}> ${HEX_FILE}
     DEPENDS ${CMAKE_PROJECT_NAME} # 主程序编译完才执行此命令
-    COMMENT "正在生成${CMAKE_PROJECT_NAME}.hex文件..."
+    COMMENT "Creating Intel HEX file: ${CMAKE_PROJECT_NAME}.hex"
 )
 
 # 自定义目标：将hex生成加入默认构建流程（ALL），执行cmake --build .时自动生成
