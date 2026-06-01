@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "gpio.h"
+#include "stm32f1xx_hal_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -91,8 +92,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1) {
+    if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)) {
+      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);
+      HAL_Delay(100);
+      /* code */
+    }
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
