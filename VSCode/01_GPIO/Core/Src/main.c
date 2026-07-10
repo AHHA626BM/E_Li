@@ -19,7 +19,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "gpio.h"
-#include "stm32f1xx_hal_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -66,7 +65,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  uint8_t i = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -88,15 +87,32 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET); 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1) {
-    if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)) {
-      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);
+    if (!HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)){
       HAL_Delay(100);
-      /* code */
+      if (!HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1)) {
+        i++;
+        i %= 3;
+        while (!HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_1));
+      }
+    }
+    switch (i)
+    {
+    case 1:
+      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_RESET);
+      break;
+    case 2:
+      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);
+      HAL_Delay(500);
+      break;
+    default:
+      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
+      break;
     }
     
     /* USER CODE END WHILE */
