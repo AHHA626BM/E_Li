@@ -1,0 +1,7 @@
+*** Using Compiler 'V6.24', folder: 'D:\Programe_software\Keil_v5\ARM\ARMCLANG\Bin'
+Build target '01_GPIO'
+compiling main.c...
+linking...
+Program Size: Code=872 RO-data=252 RW-data=0 ZI-data=1632  
+".\01_GPIO.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:01
