@@ -103,16 +103,16 @@ int main(void)
     }
     switch (i)
     {
-    case 1:
-      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_RESET);
-      break;
-    case 2:
-      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);
-      HAL_Delay(500);
-      break;
-    default:
-      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
-      break;
+      case 1:
+        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_RESET);
+        break;
+      case 2:
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_8);
+        HAL_Delay(500);
+        break;
+      default:
+        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
+        break;
     }
     
     /* USER CODE END WHILE */

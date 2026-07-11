@@ -531,6 +531,10 @@
                 "D:/Programe_software/Keil_v5/ARM/ARMCLANG/include/arm_linux_compat",
                 "D:/Programe_software/Keil_v5/ARM/ARMCLANG/include/libcxx",
                 "RTE/_01_GPIO",
+                "D:/Programe_software/Keil_v5/Pack/ARM/CMSIS/6.3.0/CMSIS/Core/Include",
+                "D:/Programe_software/Keil_v5/Pack/ARM/CMSIS/6.3.0/CMSIS/RTOS2/Include",
+                "D:/Programe_software/Keil_v5/Pack/Keil/STM32F1xx_DFP/2.4.1/Device/Include",
+                "D:/Programe_software/Keil_v5/Pack/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver/Config",
                 "RTE/Device/STM32F103C8",
                 "USER"
             ],
